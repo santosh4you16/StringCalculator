@@ -10,7 +10,7 @@ public class StringCalculator {
 			return Integer.parseInt(String.valueOf(numbers.charAt(0)));
 
 		if(numbers.length() > 1 ){
-			String s[] = numbers.split(",");
+			String s[] = numbers.split("[\n ,]+");
 			int sum = 0;
 			for(int i=0;i<s.length;i++){
 				sum += Integer.parseInt(s[i]);
@@ -22,6 +22,6 @@ public class StringCalculator {
 	
 	public static void main(String[] args) {
 		StringCalculator s = new StringCalculator();
-		System.out.println(s.add("1,2,3"));
+		System.out.println(s.add("1,2,3\n6"));
 	}
 }
